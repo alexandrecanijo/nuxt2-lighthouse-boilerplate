@@ -12,6 +12,8 @@
         class="flex justify-center pt-8 sm:pt-0"
         href="https://nuxtjs.org"
         target="_blank"
+        title="nuxtjs.org"
+        aria-label="nuxtjs.org"
       >
         <svg
           width="218"
@@ -76,7 +78,11 @@
         </p>
       </div>
       <div class="flex justify-center pt-4 space-x-2">
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank"
+        <a
+          href="https://github.com/nuxt/nuxt.js"
+          target="_blank"
+          title="nuxt.js github repository"
+          aria-label="nuxt.js github repository"
           ><svg
             class="w-6 h-6 text-gray-600 hover:text-gray-800 button--github"
             xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +99,11 @@
               fill="currentColor"
             /></svg
         ></a>
-        <a href="https://twitter.com/nuxt_js" target="_blank"
+        <a
+          href="https://twitter.com/nuxt_js"
+          target="_blank"
+          title="nuxt.js twitter"
+          aria-label="nuxt.js twitter"
           ><svg
             class="w-6 h-6 text-gray-600 hover:text-gray-800"
             xmlns="http://www.w3.org/2000/svg"
@@ -120,3 +130,14 @@ export default {
   name: 'NuxtTutorial',
 }
 </script>
+
+<style scoped>
+.text-green-500 {
+  color: #075f40;
+}
+
+.text-2xl,
+.text-gray-600 {
+  color: #000;
+}
+</style>

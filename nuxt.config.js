@@ -2,16 +2,23 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  modern: ({ isDev }) => !isDev,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt2-lighthouse-boilerplate',
+    title: 'Nuxt2 Lighthouse Boilerplate',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Nuxt2 Boilerplate with performance in mind, trying to achieve 100% on Lighthouse',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
