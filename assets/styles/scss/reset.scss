@@ -1,0 +1,127 @@
+/* stylelint-disable property-no-vendor-prefix */
+html {
+  font-size: 100%;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+figcaption,
+fieldset,
+legend,
+textarea,
+pre,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a,
+.link {
+  color: var(--link);
+  text-decoration-skip-ink: auto;
+  background-color: transparent;
+  text-decoration: none;
+  line-height: inherit;
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    color: var(--link-active);
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:focus {
+    outline-color: var(--link-focus);
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+img,
+embed,
+object {
+  height: auto;
+  max-width: 100%;
+}
+
+input,
+button,
+optgroup,
+textarea,
+select {
+  font: inherit;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
