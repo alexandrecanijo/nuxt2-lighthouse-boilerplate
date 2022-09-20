@@ -1,15 +1,9 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div
-    class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
-  >
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
+  <div class="tutorial-container">
+    <div class="wrapper">
       <a
-        class="flex justify-center pt-8 sm:pt-0"
+        class="logo"
         href="https://nuxtjs.org"
         target="_blank"
         title="nuxtjs.org"
@@ -52,11 +46,9 @@
           />
         </svg>
       </a>
-      <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
-        <h2 class="text-2xl leading-7 font-semibold">
-          Welcome to your Nuxt Application
-        </h2>
-        <p class="mt-3 text-gray-600">
+      <div class="box">
+        <h2 class="title">Welcome to your Nuxt Application</h2>
+        <p class="text">
           We recommend you take a look at the
           <a
             href="https://nuxtjs.org"
@@ -66,7 +58,7 @@
           >, whether you are new or have previous experience with the
           framework.<br />
         </p>
-        <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
+        <p class="content">
           To get started, remove
           <code class="bg-gray-100 text-sm p-1 rounded border"
             >components/Tutorial.vue</code
@@ -77,7 +69,7 @@
           >. Have fun!
         </p>
       </div>
-      <div class="flex justify-center pt-4 space-x-2">
+      <div class="footer">
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
@@ -131,7 +123,135 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+*,
+::after,
+::before {
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+.tutorial-container {
+  position: relative;
+  min-height: 100vh;
+  justify-content: center;
+  display: flex;
+  background-color: rgba(243, 244, 246, 1);
+
+  @media (min-width: 640px) {
+    align-items: center;
+  }
+
+  .wrapper {
+    max-width: 56rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 640px) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  .logo {
+    padding-top: 2rem;
+    justify-content: center;
+    display: flex;
+    color: inherit;
+    text-decoration: inherit;
+
+    @media (min-width: 640px) {
+      padding-top: 0;
+    }
+  }
+
+  .box {
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    padding: 1.5rem;
+    overflow: hidden;
+    margin-top: 2rem;
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
+
+    @media (min-width: 640px) {
+      border-radius: 0.5rem;
+    }
+  }
+
+  .title {
+    color: #000;
+    line-height: 1.75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .text {
+    color: #000;
+    margin-top: 0.75rem;
+
+    a {
+      color: #075f40;
+    }
+  }
+
+  .content {
+    color: rgba(31, 41, 55, 1);
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border: 0;
+    border-color: #e5e7eb;
+    border-top-width: 1px;
+    border-style: dashed;
+
+    code {
+      box-sizing: border-box;
+      border-style: solid;
+      border-color: #e5e7eb;
+      padding: 0.25rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      border-width: 1px;
+      border-radius: 0.25rem;
+      background-color: rgba(243, 244, 246, 1);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        'Liberation Mono', 'Courier New', monospace;
+    }
+  }
+
+  .footer {
+    padding-top: 1rem;
+    justify-content: center;
+    display: flex;
+
+    a {
+      --tw-space-x-reverse: 0;
+      margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+      margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    svg {
+      color: #000;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: block;
+      vertical-align: middle;
+    }
+  }
+}
+
 .text-green-500 {
   color: #075f40;
 }
