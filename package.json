@@ -11,7 +11,7 @@
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
-    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix && npm run lint:style -- --fix",
+    "lint:fix": "prettier --write --list-different . && npm run lint:js -- --fix && npm run lint:style -- --fix",
     "prepare": "husky install",
     "test": "jest",
     "outdated": "npx ncu",
