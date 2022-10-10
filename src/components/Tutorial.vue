@@ -2,20 +2,8 @@
 <template>
   <div class="tutorial-container">
     <div class="wrapper">
-      <a
-        class="logo"
-        href="https://nuxtjs.org"
-        target="_blank"
-        title="nuxtjs.org"
-        aria-label="nuxtjs.org"
-      >
-        <svg
-          width="218"
-          height="45"
-          viewBox="0 0 159 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+      <a class="logo" href="https://nuxtjs.org" target="_blank" title="nuxtjs.org" aria-label="nuxtjs.org">
+        <svg width="218" height="45" viewBox="0 0 159 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M55.5017 6.81866H60.1727L70.0719 22.9912V6.81866H74.3837V29.7345H69.7446L59.8135 13.5955V29.7345H55.5017V6.81866Z"
             fill="#003543"
@@ -50,23 +38,15 @@
         <h2 class="title">Welcome to your Nuxt Application</h2>
         <p class="text">
           We recommend you take a look at the
-          <a
-            href="https://nuxtjs.org"
-            target="_blank"
-            class="button--doc text-green-500 hover:underline"
+          <a href="https://nuxtjs.org" target="_blank" class="button--doc text-green-500 hover:underline"
             >Nuxt documentation</a
-          >, whether you are new or have previous experience with the
-          framework.<br />
+          >, whether you are new or have previous experience with the framework.<br />
         </p>
         <p class="content">
           To get started, remove
-          <code class="bg-gray-100 text-sm p-1 rounded border"
-            >components/Tutorial.vue</code
-          >
+          <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code>
           and start coding in
-          <code class="bg-gray-100 text-sm p-1 rounded border"
-            >pages/index.vue</code
-          >. Have fun!
+          <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
         </p>
       </div>
       <div class="footer">
@@ -91,11 +71,7 @@
               fill="currentColor"
             /></svg
         ></a>
-        <a
-          href="https://twitter.com/nuxt_js"
-          target="_blank"
-          title="nuxt.js twitter"
-          aria-label="nuxt.js twitter"
+        <a href="https://twitter.com/nuxt_js" target="_blank" title="nuxt.js twitter" aria-label="nuxt.js twitter"
           ><svg
             class="w-6 h-6 text-gray-600 hover:text-gray-800"
             xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +96,7 @@
 <script>
 export default {
   name: 'NuxtTutorial',
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -137,7 +113,7 @@ export default {
   min-height: 100vh;
   justify-content: center;
   display: flex;
-  background-color: rgba(243, 244, 246, 1);
+  background-color: rgb(243 244 246 / 100%);
 
   @media (min-width: 640px) {
     align-items: center;
@@ -167,20 +143,22 @@ export default {
   }
 
   .box {
-    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
     --tw-ring-offset-shadow: 0 0 #0000;
     --tw-ring-shadow: 0 0 #0000;
+
     box-sizing: border-box;
     border-width: 0;
     border-style: solid;
     border-color: #e5e7eb;
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     padding: 1.5rem;
     overflow: hidden;
     margin-top: 2rem;
+
     --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, 1);
+
+    background-color: rgb(255 255 255 / 100%);
 
     @media (min-width: 640px) {
       border-radius: 0.5rem;
@@ -204,7 +182,7 @@ export default {
   }
 
   .content {
-    color: rgba(31, 41, 55, 1);
+    color: rgb(31 41 55 / 100%);
     padding-top: 1rem;
     margin-top: 1rem;
     border: 0;
@@ -221,9 +199,8 @@ export default {
       line-height: 1.25rem;
       border-width: 1px;
       border-radius: 0.25rem;
-      background-color: rgba(243, 244, 246, 1);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        'Liberation Mono', 'Courier New', monospace;
+      background-color: rgb(243 244 246 / 100%);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     }
   }
 
@@ -234,6 +211,7 @@ export default {
 
     a {
       --tw-space-x-reverse: 0;
+
       margin-right: calc(0.5rem * var(--tw-space-x-reverse));
       margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 

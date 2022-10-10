@@ -1,4 +1,5 @@
 module.exports = {
+  rootDir: './src',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
@@ -10,9 +11,16 @@ module.exports = {
     '.*\\.(vue)$': 'vue-jest',
   },
   collectCoverage: true,
-  collectCoverageFrom: [
-    '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue',
-  ],
+  coverageDirectory: '<rootDir>/../coverage',
+  coverageReporters: ['html', 'lcov', 'text'],
+  collectCoverageFrom: ['<rootDir>/**/*.{js,vue}', '!<rootDir>/**/*.{snap}'],
+  coverageThreshold: {
+    global: {
+      branches: 90,
+      functions: 90,
+      lines: 90,
+      statements: 90,
+    },
+  },
   testEnvironment: 'jsdom',
-}
+};

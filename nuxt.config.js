@@ -1,8 +1,12 @@
+const isDev = process.env.NODE_ENV !== 'production';
+
 export default {
+  srcDir: 'src/',
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  modern: ({ isDev }) => !isDev,
+  modern: !isDev,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -16,8 +20,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'Nuxt2 Boilerplate with performance in mind, trying to achieve 100% on Lighthouse',
+        content: 'Nuxt2 Boilerplate with performance in mind, trying to achieve 100% on Lighthouse',
       },
       { name: 'format-detection', content: 'telephone=no' },
     ],
@@ -57,6 +60,11 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
 
+  eslint: {
+    fix: true,
+    extensions: ['js', 'ts', 'vue', 'css', 'scss'],
+  },
+
   loading: false,
 
   loadingIndicator: false,
@@ -85,9 +93,7 @@ export default {
     http2: {
       push: true,
       pushAssets: (req, res, publicPath, preloadFiles) =>
-        preloadFiles.map(
-          (f) => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`
-        ),
+        preloadFiles.map((f) => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`),
     },
     asyncScripts: true,
     resourceHints: true,
@@ -108,12 +114,9 @@ export default {
       app: ({ isDev }) => (isDev ? '[name].js' : '[contenthash].js'),
       chunk: ({ isDev }) => (isDev ? '[name].js' : '[contenthash].js'),
       css: ({ isDev }) => (isDev ? '[name].css' : '[contenthash].css'),
-      img: ({ isDev }) =>
-        isDev ? '[path][name].[ext]' : 'img/[contenthash:7].[ext]',
-      font: ({ isDev }) =>
-        isDev ? '[path][name].[ext]' : 'fonts/[contenthash:7].[ext]',
-      video: ({ isDev }) =>
-        isDev ? '[path][name].[ext]' : 'videos/[contenthash:7].[ext]',
+      img: ({ isDev }) => (isDev ? '[path][name].[ext]' : 'img/[contenthash:7].[ext]'),
+      font: ({ isDev }) => (isDev ? '[path][name].[ext]' : 'fonts/[contenthash:7].[ext]'),
+      video: ({ isDev }) => (isDev ? '[path][name].[ext]' : 'videos/[contenthash:7].[ext]'),
     },
     quiet: false,
     optimization: {
@@ -150,4 +153,4 @@ export default {
   generate: {
     fallback: true,
   },
-}
+};
