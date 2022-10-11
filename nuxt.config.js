@@ -1,12 +1,10 @@
-const isDev = process.env.NODE_ENV !== 'production';
-
 export default {
   srcDir: 'src/',
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  modern: !isDev,
+  modern: ({ isDev }) => !isDev,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
