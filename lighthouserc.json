@@ -2,8 +2,16 @@
   "ci": {
     "collect": {
       "startServerCommand": "npm run build && npm run generate && npm run start",
-      "url": ["http://localhost:3000/"],
+      "url": ["http://localhost:3000/", "https://nuxt2-lighthouse-boilerplate.netlify.app/"],
       "numberOfRuns": 3
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["warn", { "minScore": 0.8, "aggregationMethod": "median-run" }],
+        "categories:accessibility": ["warn", { "minScore": 0.8, "aggregationMethod": "median-run" }],
+        "categories:best-practices": ["warn", { "minScore": 0.8, "aggregationMethod": "median-run" }],
+        "categories:seo": ["warn", { "minScore": 0.8, "aggregationMethod": "median-run" }]
+      }
     },
     "upload": {
       "target": "temporary-public-storage"
