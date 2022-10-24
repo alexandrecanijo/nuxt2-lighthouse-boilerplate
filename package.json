@@ -15,7 +15,9 @@
     "prepare": "husky install",
     "test": "jest",
     "outdated": "npx browserslist@latest --update-db && npx ncu",
-    "updated": "npx ncu -u"
+    "updated": "npx ncu -u",
+    "lighthouse:mobile": "lhci autorun",
+    "lighthouse:desktop": "lhci autorun --collect.settings.preset=desktop"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint --cache",
@@ -34,6 +36,7 @@
     "@babel/eslint-parser": "^7.19.1",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@lhci/cli": "^0.9.0",
     "@nuxtjs/eslint-config": "^11.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
     "@nuxtjs/style-resources": "^1.2.1",

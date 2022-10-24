@@ -89,5 +89,8 @@ sw.*
 # Vim swap files
 *.swp
 
+# Lighthouse reports
+.lighthouseci
+
 # Misc
 .info
