@@ -30,7 +30,7 @@
     "vue": "^2.7.14",
     "vue-server-renderer": "^2.7.14",
     "vue-template-compiler": "^2.7.14",
-    "webpack": "^4.46.0"
+    "webpack": "^5.76.3"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",
