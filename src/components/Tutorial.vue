@@ -35,10 +35,10 @@
         </svg>
       </a>
       <div class="box">
-        <h2 class="title">Welcome to your Nuxt Application</h2>
+        <h1 class="title">Welcome to your Nuxt Application</h1>
         <p class="text">
           We recommend you take a look at the
-          <a href="https://nuxtjs.org" target="_blank" class="button--doc text-green-500 hover:underline"
+          <a href="https://nuxtjs.org" target="_blank" class="link button--doc text-green-500 hover:underline"
             >Nuxt documentation</a
           >, whether you are new or have previous experience with the framework.<br />
         </p>
@@ -228,6 +228,10 @@ export default {
       vertical-align: middle;
     }
   }
+}
+
+.link {
+  text-decoration: underline;
 }
 
 .text-green-500 {
